@@ -1,15 +1,19 @@
-import './App.css';
-// import ClassClick from './ClassClick.js'
-// import FunctionClick from './FunctionClick.js'
- import ClickCounter from './ClickCounter.js'
+import React from 'react'
+import './App.css'
 
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
-function App() {
+import cakeReducer from './redux/cake/cakeReducer.js'
+const store = createStore(cakeReducer)
+
+function App () {
   return (
-  <>
-<ClickCounter num={10} othernum={5}/>
-  </>
-  );
+    <Provider store={store}>
+      <div className='App'>
+      </div>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
