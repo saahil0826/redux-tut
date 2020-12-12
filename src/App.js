@@ -6,8 +6,8 @@ import HooksCakeContainer from './components/HooksCakeContainer'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
-import cakeReducer from './redux/cake/cakeReducer.js'
-const store = createStore(cakeReducer)
+import rootReducer from './redux/rootReducer.js'
+const store = createStore(rootReducer)
 
 function App () {
   return (
