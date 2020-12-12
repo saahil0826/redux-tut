@@ -5,10 +5,13 @@ import IceCreamContainer from './components/IceCreamContainer.js'
 import HooksCakeContainer from './components/HooksCakeContainer'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import logger from 'redux-logger'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
 
 import rootReducer from './redux/rootReducer.js'
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger)))
 
 function App () {
   return (
