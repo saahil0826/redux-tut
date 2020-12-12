@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import CakeContainer from './components/CakeContainer.js'
+import IceCreamContainer from './components/IceCreamContainer.js'
 import HooksCakeContainer from './components/HooksCakeContainer'
 
 import { Provider } from 'react-redux'
@@ -15,6 +16,7 @@ function App () {
       <div className='App'>
       <CakeContainer/>
       <HooksCakeContainer />
+      <IceCreamContainer />
       </div>
     </Provider>
   )
