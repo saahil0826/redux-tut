@@ -9,7 +9,7 @@ function HooksCakeContainer () {
   return (
     <div>
     <h4>Redux with hooks</h4>
-      <h2>Number of cakes - {numOfCakes} </h2>
+      <h2>Number of cakes = {numOfCakes} </h2>
       <button onClick={() => dispatch(buyCake())}>Buy Cake</button>
     </div>
   )

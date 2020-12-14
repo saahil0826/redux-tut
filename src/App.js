@@ -2,7 +2,8 @@ import React from 'react'
 import './App.css'
 import CakeContainer from './components/CakeContainer.js'
 import IceCreamContainer from './components/IceCreamContainer.js'
-import HooksCakeContainer from './components/HooksCakeContainer'
+import HooksCakeContainer from './components/HooksCakeContainer.js'
+import NewCakeContainer from './components/NewCakeContainer.js'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
@@ -20,6 +21,7 @@ function App () {
       <CakeContainer/>
       <HooksCakeContainer />
       <IceCreamContainer />
+      <NewCakeContainer />
       </div>
     </Provider>
   )
