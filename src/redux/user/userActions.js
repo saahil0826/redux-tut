@@ -7,7 +7,7 @@ import {
 
 export const fetchUsers = () => {
   return (dispatch) => {
-    dispatch(fetchUsersRequest())
+    dispatch(fetchUsersRequest)
     axios
       .get('https://jsonplaceholder.typicode.com/users')
       .then(response => {

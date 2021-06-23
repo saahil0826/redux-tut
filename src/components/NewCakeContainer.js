@@ -10,12 +10,12 @@ function NewCakeContainer(props) {
     <h4>Redux with payload</h4>
       <h2>Number of cakes = {props.numOfCakes} </h2>
       <input
-        type="text"
+        type="number"
         value={number}
         onChange={e => setNumber(e.target.value)}
       />
-      <button onClick={() => props.buyCake(number)}>Buy X Cakes</button>
-      <button onClick={() => props.returnCake(number)}>Return X Cakes</button>
+      <button onClick={() => props.buyCake(number)}>Buy {number} Cakes</button>
+      <button onClick={() => props.returnCake(number)}>Return {number} Cakes</button>
     </div>
   );
 }
@@ -26,11 +26,10 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    buyCake: number => dispatch(buyCake(number)),
-    returnCake: number => dispatch(returnCake(number))
-  };
-};
+
+const mapDispatchToProps = (dispatch) => ({
+  buyCake: number => dispatch(buyCake(number)),
+  returnCake: number => dispatch(returnCake(number))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewCakeContainer);

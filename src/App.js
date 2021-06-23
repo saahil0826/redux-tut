@@ -5,6 +5,7 @@ import IceCreamContainer from './components/IceCreamContainer.js'
 import HooksCakeContainer from './components/HooksCakeContainer.js'
 import NewCakeContainer from './components/NewCakeContainer.js'
 import UsersContainer from './components/UsersContainer.js'
+// import UseReducerExample from './components/use-reducer-example.js'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
